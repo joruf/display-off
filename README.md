@@ -32,9 +32,9 @@ Ensure you have `xset` (usually pre-installed with X11) and `zenity` (for the gr
 
 Open your terminal, navigate to the folder where the scripts are stored, and grant execution permissions to all three files:
 ```bash
-git clone https://github.com/joruf/desktop-off.git
-cd desktop-off
+git clone https://github.com/joruf/display-off.git
+cd display-off
 chmod +x DisplayOff.sh setup-requirements.sh setup-shortcut.sh
-./DesktopOff.sh
+./DisplayOff.sh
 
 ```
