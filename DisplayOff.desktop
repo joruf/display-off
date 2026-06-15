@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Display Off
+Comment=Turn off the display until mouse or keyboard input
+Icon=display
+Exec=python3 display_off.py
+Terminal=false
+Categories=Utility;
+StartupNotify=true
