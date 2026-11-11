@@ -36,3 +36,18 @@ cd display-off
 chmod +x display_off.py setup_requirements.py desktop_setup.py
 python3 display_off.py
 ```
+
+## Executable
+
+A single-file Linux executable (x86_64, built on Ubuntu 22.04, runs on the same or a newer glibc) is published on the [Releases page](https://github.com/joruf/display-off/releases). Download `display-off-linux-x86_64-<version>-build<build>`, make it executable (`chmod +x`) and start it. `--version` prints its version.
+
+It turns the display off through `xset` (package `x11-xserver-utils`) on X11. If `xset` is missing, the executable says so and stops instead of installing it. The first-run offer for a desktop shortcut is skipped in the executable.
+
+Build it yourself from a full clone (the version is counted from the commit history):
+
+```bash
+sudo apt install python3-venv python3-tk
+./build-exe.py            # --clean rebuilds the build environment, --keep-env reuses it
+```
+
+The result is `dist/display-off-linux-x86_64-<version>-build<build>`. The GitHub Actions workflow `release-exe.yml` does the same on every push to `main` and publishes the file as the release `v<version>-build<build>`.
